@@ -80,6 +80,6 @@ final class ResultViewController: UIViewController {
     
     
     deinit {
-        print("\(type(of: self)) has been delocation")
+        print("\(type(of: self)) has been deallocation")
     }
 }
