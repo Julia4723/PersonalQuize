@@ -8,7 +8,10 @@
 import UIKit
 
 final class ResultViewController: UIViewController {
-    var questions: Question!
+    
+    @IBOutlet var resultLabel: UILabel!
+    @IBOutlet var resultCharacter: UILabel!
+
     var answersChosen: [Answer] = []
 
     var animals: [String] = [] //массив в котором собираю животных из массива chosenAnswers
@@ -19,14 +22,11 @@ final class ResultViewController: UIViewController {
     var countAnimalsCharacter: [Character: Int] = [:]
     var animalChosenCharacter: [Character] = []
     
-    @IBOutlet var resultLabel: UILabel!
-    @IBOutlet var resultCharacter: UILabel!
-
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationItem.setHidesBackButton(true, animated: true)
+        navigationItem.setHidesBackButton(true, animated: true)
         
         for answer in answersChosen {
             let animal = answer.animal.definition
